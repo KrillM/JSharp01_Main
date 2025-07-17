@@ -33,5 +33,29 @@ public class Ex04_Calculate {
         System.out.println(a || c);
         System.out.println(c || b);
 
+
+        int d = 10;
+        int e = 6;
+        int result = (d+=e);
+        System.out.println(result);
+
+        result = (d-=e);
+        System.out.println(result);
+
+        result = (d*=e);
+        System.out.println(result);
+
+        result = (d/=e);
+        System.out.println(result);
+
+        result = (d%=e);
+        System.out.println(result);
+
+        int f = 10;
+        System.out.println(f++);
+        System.out.println(++f);
+
+        System.out.println(f--);
+        System.out.println(--f);
     }
 }
