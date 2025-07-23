@@ -34,7 +34,7 @@ class C2 extends C{
 
 }
 
-public class N02_AccessModifier {
+public class Ex02_AccessModifier {
     public static void main(String[] args) {
         C c1 = new C();
         System.out.println(c1.x1);

@@ -10,7 +10,7 @@ class B extends A{
 
 }
 
-public class N01_Has2Is {
+public class Ex01_Has2Is {
 
     protected static String x3 = "Protected";
 
