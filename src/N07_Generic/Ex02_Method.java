@@ -2,42 +2,43 @@ package N07_Generic;
 
 public class Ex02_Method {
 
-    static <T> T ReturnOneParameter(T t){
-        return t;
+    static <K> K getSingleParameter(K k){
+        return k;
     }
 
-    static <T, V> boolean ReturnTwoParameters(T t, V v){
-        return t.equals(v);
+    static <K, V> boolean getDoubleParameter(K k, V v){
+        return k == v;
     }
 
-    static <T> void VoidOneParameter(T t){
-        System.out.println(t);
+    static <K> void setSingleParameter(K k){
+        System.out.println(k);
     }
 
-    static <T, V> void VoidTwoParameters(T t, V v){
-        System.out.println(t);
+    static <K, V> void setDoubleParameter(K k, V v){
+        System.out.println(k);
         System.out.println(v);
     }
 
     public static void main(String[] args) {
+        String name = "Yena";
+        String printName = Ex02_Method.getSingleParameter(name);
+        System.out.println(printName);
 
-        // static을 선언해도 어떤 클래스에서 유래했는지 알 기 위해 앞에 클래스 이름은 필수이다.
-        String yena = Ex02_Method.ReturnOneParameter("Yena");
-        int age = Ex02_Method.ReturnOneParameter(19);
-        System.out.println(yena);
-        System.out.println(age);
+        int age = 22;
+        int printAge = Ex02_Method.getSingleParameter(age);
+        System.out.println(printAge);
 
-        String Com1 = "HP";
-        String Com2 = "HP";
-        boolean Compare = Ex02_Method.ReturnTwoParameters(Com1, Com2);
-        System.out.println(Compare);
+        String com1 = "Eden";
+        String com2 = "Eden";
+        String com3 = "Eren";
 
-        Ex02_Method.VoidOneParameter("Yummy");
-        Ex02_Method.VoidTwoParameters("Messi", 10);
+        boolean com1n2 = Ex02_Method.getDoubleParameter(com1, com2);
+        System.out.println(com1n2);
 
-        Member member = Ex02_Method.ReturnOneParameter(new Member("Sooah", 26, "Female"));
-        System.out.println(member.getName());
-        System.out.println(member.getGender());
-        System.out.println(member.getAge());
+        boolean com1n3 = Ex02_Method.getDoubleParameter(com1, com3);
+        System.out.println(com1n3);
+
+        Ex02_Method.setSingleParameter(name);
+        Ex02_Method.setDoubleParameter(com2, age);
     }
 }
