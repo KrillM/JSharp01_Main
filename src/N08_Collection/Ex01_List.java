@@ -5,12 +5,20 @@ import java.util.List;
 
 public class Ex01_List {
     public static void main(String[] args) {
-        List<CrewInfo> crewInfos = new ArrayList<>();
-        crewInfos.add(new CrewInfo("Krille", 28, "Male", "Brisbane"));
-        crewInfos.add(new CrewInfo("Yena", 19, "Female", "Seoul"));
-        crewInfos.add(new CrewInfo("Asahi", 27, "Male", "Tokyo"));
+        List<CrewInfo> crew = new ArrayList<>();
+        crew.add(new CrewInfo("Krille", 27, "Male", "Brisbane"));
+        crew.add(new CrewInfo("Yena", 22, "Feale", "Seoul"));
+        crew.add(new CrewInfo("Jisu", 18, "Male", "Sydney"));
+        crew.add(new CrewInfo("Asahi", 25, "Male", "Tokyo"));
 
-        crewInfos.get(0).print();
-        crewInfos.get(1).print();
+        for(int i=0;i<crew.size();i++){
+            System.out.println("Crew "+(i+1));
+            System.out.println("Name \t"+crew.get(i).getName());
+            System.out.println("Age \t"+crew.get(i).getAge());
+            System.out.println("Gender \t"+crew.get(i).getGender());
+            System.out.println("Home \t"+crew.get(i).getAddress());
+        }
+
+        System.out.println("\r\n"+crew.size());
     }
 }
