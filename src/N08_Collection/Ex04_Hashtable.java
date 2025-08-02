@@ -18,5 +18,10 @@ public class Ex04_Hashtable {
 
         System.out.println(crew.containsKey(2));
         System.out.println(crew.containsValue("Pieke"));
+
+        // 특징
+        // 1. null 허용 안 함
+        // 2. 동기화(멀티 쓰레드 용 아닐 경우 추천 안 함)
+        // 3. HashMap을 더 사용
     }
 }
